@@ -4,7 +4,7 @@
 
 ### Task 1 – Acquisition
 
-![img](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)First we perform acquisition of GPS signals from raw front-end data. Our code searches for signals from satellites specified in the settings structure by correlating the incoming signal with locally generated C/A codes. The function first processes the input signal (potentially resampling it to speed up acquisition), then performs a two-step acquisition process: a coarse search across frequency bins and code phases, followed by a fine resolution frequency search for detected signals. For each satellite, it calculates the correlation peak ratio to determine if a signal is present, and if found, it stores the code phase and carrier frequency in the output structure. 
+![img](file:///./files/clip_image002.jpg)First we perform acquisition of GPS signals from raw front-end data. Our code searches for signals from satellites specified in the settings structure by correlating the incoming signal with locally generated C/A codes. The function first processes the input signal (potentially resampling it to speed up acquisition), then performs a two-step acquisition process: a coarse search across frequency bins and code phases, followed by a fine resolution frequency search for detected signals. For each satellite, it calculates the correlation peak ratio to determine if a signal is present, and if found, it stores the code phase and carrier frequency in the output structure. 
 
  
 
@@ -34,11 +34,11 @@
 
  
 
-![img](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg)
+![img](file:///./files/clip_image004.jpg)
 
-![img](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image006.jpg)Fig.1 Acquisition results (Opensky)
+![img](file:///./files/clip_image006.jpg)Fig.1 Acquisition results (Opensky)
 
-### ![img](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image008.jpg)
+### ![img](file:///./files/clip_image008.jpg)
 
 Fig.2 Acquisition results (Urban)
 
@@ -56,7 +56,7 @@ Adapt the **tracking loop (DLL)** to generate **correlation plots** and analyze 
 
 Then we perform tracking of GPS signals for channels identified by the acquisition process. We implement both code tracking (DLL - Delay Lock Loop) and carrier tracking (PLL - Phase Lock Loop) to follow the signal as it changes over time. For each channel with an assigned PRN, the function generates local replicas of early, prompt, and late versions of the C/A code, mixes the incoming signal to baseband using carrier wave estimates, and calculates correlation values. These correlation values feed into discriminators that determine tracking errors, which are then filtered and used to adjust the code and carrier frequency estimates in a feedback loop. The function collects tracking metrics throughout processing, including signal strength (C/No), correlator outputs, and loop discriminator values, updating a progress bar every 50ms. The output structure contains detailed tracking results for each millisecond of processing across all active channels.
 
-![img](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image010.jpg)
+![img](file:///./files/clip_image010.jpg)
 
  
 
@@ -66,7 +66,7 @@ Fig.3 Channel 1 (RPN 16) results (Opeksky)
 
  
 
-![img](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image012.jpg)
+![img](file:///./files/clip_image012.jpg)
 
  
 
@@ -92,21 +92,21 @@ Fig.3 Channel 1 (RPN 16) results (Opeksky)
 
  
 
-Fig.![img](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image014.jpg)4 Channel 1 (RPN 16) CNo (Opensky)
+Fig.![img](file:///./files/clip_image014.jpg)4 Channel 1 (RPN 16) CNo (Opensky)
 
 ###  
 
 Fig.5 Channel 2 (RPN 26) result (Opensky)
 
-### ![img](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image016.jpg)
+### ![img](file:///./files/clip_image016.jpg)
 
 Fig.6 Channel 2 (RPN 26) CNo (Opensky)
 
-![A screenshot of a computer  AI-generated content may be incorrect.](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image018.jpg)
+![A screenshot of a computer  AI-generated content may be incorrect.](file:///./files/clip_image018.jpg)
 
 Fig.7 Channel 1 (RPN 1) results (Urban)
 
-![A screen shot of a computer  AI-generated content may be incorrect.](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image020.jpg)
+![A screen shot of a computer  AI-generated content may be incorrect.](file:///./files/clip_image020.jpg)
 
 Fig.8 Channel 1 (RPN 1) CNo (Urban)
 
@@ -178,13 +178,13 @@ The navigation part of our code takes tracking results for GPS satellites and ca
 
 Using **pseudorange measurements** from tracking, implement the **Weighted Least Squares (WLS)** algorithm to compute the **user's position and velocity**.
 
-·  ![img](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image022.jpg)Plot the user **position** and **velocity**. 
+·  ![img](file:///./files/clip_image022.jpg)Plot the user **position** and **velocity**. 
 
  
 
 Fig.9 Navigation results (Opensky)
 
-![A screenshot of a computer  AI-generated content may be incorrect.](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image024.jpg)
+![A screenshot of a computer  AI-generated content may be incorrect.](file:///./files/clip_image024.jpg)
 
  
 
@@ -334,11 +334,11 @@ We can see that measurement error in the Opensky dataset is much smaller than Ur
 
 Output visualization for Urban dataset:
 
-![A screenshot of a computer  AI-generated content may be incorrect.](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image026.gif)
+![A screenshot of a computer  AI-generated content may be incorrect.](file:///./files/clip_image026.gif)
 
 Fig. 11 Comparison of Latitude, Longitude and Height results derived by WLS (blue dots) method and EKF (red line) method (Urban)
 
-![A screen shot of a computer  AI-generated content may be incorrect.](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image028.gif)
+![A screen shot of a computer  AI-generated content may be incorrect.](file:///./files/clip_image028.gif)
 
 Fig. 12 Comparison of North, East, Up results derived by WLS (blue dots) method and EKF (red line) method (Urban)
 
@@ -346,7 +346,7 @@ Fig. 12 Comparison of North, East, Up results derived by WLS (blue dots) method 
 
  
 
-![A screenshot of a computer  AI-generated content may be incorrect.](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image030.gif)
+![A screenshot of a computer  AI-generated content may be incorrect.](file:///./files/clip_image030.gif)
 
 Fig. 13 Comparison of Position Error Standard Deviation from by WLS (blue dots) method and EKF (red line) method (Urban)
 
@@ -358,19 +358,19 @@ Output visualization for Opensky dataset:
 
  
 
-![A screen shot of a computer  AI-generated content may be incorrect.](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image032.gif)
+![A screen shot of a computer  AI-generated content may be incorrect.](file:///./files/clip_image032.gif)
 
 Fig. 14 Comparison of Latitude, Longitude and Height results derived by WLS (blue dots) method and EKF (red line) method (Opensky)
 
  
 
-![A screenshot of a computer  AI-generated content may be incorrect.](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image034.gif)
+![A screenshot of a computer  AI-generated content may be incorrect.](file:///./files/clip_image034.gif)
 
 Fig. 15 Comparison of North, East, Up results derived by WLS (blue dots) method and EKF (red line) method (Opensky)
 
  
 
-![A screenshot of a computer  AI-generated content may be incorrect.](file:///C:/Users/dongz/AppData/Local/Temp/msohtmlclip1/01/clip_image036.gif)
+![A screenshot of a computer  AI-generated content may be incorrect.](file:///./files/clip_image036.gif)
 
 Fig. 16 Comparison of Position Error Standard Deviation from by WLS (blue dots) method and EKF (red line) method (Opensky)
 
