@@ -4,7 +4,7 @@
 
 ### Task 1 – Acquisition
 
-![img](file:///files/clip_image002.jpg)First we perform acquisition of GPS signals from raw front-end data. Our code searches for signals from satellites specified in the settings structure by correlating the incoming signal with locally generated C/A codes. The function first processes the input signal (potentially resampling it to speed up acquisition), then performs a two-step acquisition process: a coarse search across frequency bins and code phases, followed by a fine resolution frequency search for detected signals. For each satellite, it calculates the correlation peak ratio to determine if a signal is present, and if found, it stores the code phase and carrier frequency in the output structure. 
+![img](https://github.com/dongzhesu/AAE6102Homework1/blob/main/files/clip_image001.png)First we perform acquisition of GPS signals from raw front-end data. Our code searches for signals from satellites specified in the settings structure by correlating the incoming signal with locally generated C/A codes. The function first processes the input signal (potentially resampling it to speed up acquisition), then performs a two-step acquisition process: a coarse search across frequency bins and code phases, followed by a fine resolution frequency search for detected signals. For each satellite, it calculates the correlation peak ratio to determine if a signal is present, and if found, it stores the code phase and carrier frequency in the output structure. 
 
  
 
